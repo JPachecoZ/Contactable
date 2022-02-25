@@ -1,60 +1,23 @@
-const CONTACT_LIST =[
-  {name: "Andrew Clark"},
-  {name: "Brian Vaughn"},
-  {name: "Dan Abramov"},
-  {name: "Dominic Gannaway"},
-  {name: "Luna Ruan"},
-  {name: "Rachel Nabors"},
-  {name: "Rick Hanlon"},
-  {name: "Yuzhi Zheng"},
-]
-
-let rendered_contacts = ``;
-
-for (let element of CONTACT_LIST){
-  rendered_contacts +=`
-  <div class="box contact_row">
-  <div class="contact">
-    <img src="/img/Profile.svg" />
-    <span>${element.name}</span>
-  </div>
-  <img src="/img/Star.svg" class="favorite" />
-  </div>
-  `
-}
-
-const home= `
-  <section>
-    <div class="box header">
-      <span>Contactable</span>
-      <a href="" class="link">Logout</a>
-    </div>
-    <div class="box home">CONTACTS (10)</div>
-    <div class="headline"></div>
-
-    <div class="js-contacts"></div>
-
-    <div class="box flex-end sticky">
-      <div class="add_contact">
-        <img src="/img/Union.svg" class="plus" />
-      </div>
-    </div>
-  </section>
-`
-const contact = `
-<div class="box contact_row">
-  <div class="contact">
-    <img src="/img/Profile.svg" />
-    <span>Andrew Clark</span>
-  </div>
-  <img src="/img/Star.svg" class="favorite" />
-</div>
-`
-
-function render(layout, destination){
-  const main = document.querySelector(destination);
-  main.innerHTML = layout;
-}
+import {home, contacts_template, id_count} from './scripts/templates.js'
+import {render} from './scripts/handlers.js'
 
 render(home, "body");
-render(rendered_contacts, ".js-contacts");
+render(contacts_template, ".js-contacts");
+
+for (let i=0; i<=id_count;i++){
+  const favorite = document.querySelector(`.star`);
+  favorite.addEventListener("click", function(){
+    if (this.getAttribute('class')=="star"){
+      this.innerHTML=`
+      <img src="/img/StarB.svg" class="favorite1" />
+      <img src="/img/Starin.svg" class="favorite" />
+      `
+      this.setAttribute('class', "staron");
+    } else{
+      this.innerHTML=`
+      <img src="/img/Star.svg" class="favorite" />
+      `
+      this.setAttribute('class', "star");
+    }
+  })
+}

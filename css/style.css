@@ -84,6 +84,13 @@ select::-ms-expand {
 .favorite {
   width: 19.85px;
   height: 18.96px;
+  position: relative;
+}
+
+.favorite1 {
+  width: 19.85px;
+  height: 18.96px;
+  position: absolute;
 }
 
 .contact {
@@ -170,3 +177,4 @@ select::-ms-expand {
   position: sticky;
   bottom: 20px;
 }
+
