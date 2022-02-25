@@ -38,7 +38,7 @@ for (let element of CONTACT_LIST){
   id_count++;
 }
 
-const login = `
+const login_template = `
   <section>
     <div class="box">Login</div>
     <div class="headline"></div>
@@ -116,4 +116,4 @@ const signup = `
     </ul>
   </section>
 `
-export {home, contacts_template, id_count, login, signup}
+export {home, contacts_template, id_count, login_template, signup}
