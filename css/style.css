@@ -6,7 +6,6 @@
 }
 
 .box {
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
   height: 56px;
   display: flex;
@@ -17,6 +16,7 @@
 }
 
 section {
+  font-family: "Roboto", sans-serif;
   margin: auto;
   max-width: 760px;
 }
@@ -42,7 +42,6 @@ section {
 
 label {
   font-size: 12px;
-  font-family: "Roboto", sans-serif;
   color: #bfbfbf;
   font-weight: 400;
 }
@@ -54,7 +53,6 @@ label {
   justify-content: flex-end;
   padding: 15px;
   color: #2962ff;
-  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -112,7 +110,6 @@ label {
 
 .secondary {
   font-size: 12px;
-  font-family: "Roboto", sans-serif;
   color: #bfbfbf;
   font-weight: 400;
   margin: 4px;
@@ -123,9 +120,25 @@ label {
 }
 
 .flex {
-  display:flex;
+  display: flex;
 }
 
 .gap-10 {
-  gap:10px;
+  gap: 10px;
+}
+
+.attribute {
+  width: 56px;
+  font-size: 12px;
+  color: #595959;
+}
+
+.attribute_value {
+  font-size: 12px;
+  color: #262626;
+}
+
+.attribute_box{
+  height: 20px;
+  margin: 16px 70px;
 }
