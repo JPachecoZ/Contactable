@@ -5,7 +5,7 @@ import {addContactListeners, addLoginListeners} from './scripts/listeners.js'
 import { createContact, getContact, getContacts, deleteContact, updateContact, toggleFavorite } from "./scripts/services/contacts-service.js";
 import { login, signup } from "./scripts/services/session-service.js";
 
-if (0 == 2){
+if (sessionStorage.contactable_token){
   render(home, "body");
   render(contacts_template, ".js-contacts");
   addContactListeners();
