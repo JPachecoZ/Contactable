@@ -26,9 +26,9 @@ export default async function apiFetch(
     body: body ? JSON.stringify(body) : null,
   };
 
-  const response = await fetch(BASE_URI + endpoint, config);
+  console.log(BASE_URI + endpoint)
 
-  console.log(response)
+  const response = await fetch(BASE_URI + endpoint, config);
 
   let data;
   if (!response.ok) {
@@ -45,7 +45,7 @@ export default async function apiFetch(
   } catch (error) {
     data = response.statusText;
   }
-  console.log(data)
+
   return data;
 
 }
