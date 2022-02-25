@@ -138,7 +138,21 @@ label {
   color: #262626;
 }
 
-.attribute_box{
+.attribute_box {
   height: 20px;
   margin: 16px 70px;
+}
+
+.contact_row:hover {
+  background-color: #f5f5f5;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 20px;
 }
