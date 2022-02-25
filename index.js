@@ -1,14 +1,14 @@
-import { login } from "./scripts/services/session-service.js";
+import { login, signup } from "./scripts/services/session-service.js";
 
 const credentials = {
-  email: "davis@mail.com",
+  email: "steve@mail.com",
   password: "123456"
 }
 
 async function test() {
   try {
-    const user = await login(credentials);
-    console.log(user);
+    const myUser = await signup(credentials);
+    console.log(myUser);
   } catch (error) {
     console.log(error.message);
   }
