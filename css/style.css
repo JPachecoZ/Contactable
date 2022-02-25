@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.headline {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.box {
+  font-size: 20px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-weight: 400;
+  justify-content: space-between;
+}
+
+section {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  max-width: 760px;
+}
+
+.input {
+  font-size: 12px;
+  padding: 8px 50px;
+  width: 100%;
+}
+
+.inner_input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+input {
+  font-size: 12px;
+  color: #bfbfbf;
+  font-weight: 400;
+  border: 0;
+  width: 100%;
+  outline: none;
+}
+
+select {
+  font-size: 12px;
+  color: #bfbfbf;
+  font-weight: 400;
+  border: 0;
+  width: 100%;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}
+
+.link {
+  display: flex;
+  gap: 26px;
+  font-size: 12px;
+  justify-content: flex-end;
+  padding: 15px;
+  color: #2962ff;
+}
+
+.header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #595959;
+  justify-content: space-between;
+}
+
+.home {
+  font-size: 12px;
+  color: #595959;
+}
+
+.favorite {
+  width: 19.85px;
+  height: 18.96px;
+  position: relative;
+}
+
+.favorite1 {
+  width: 19.85px;
+  height: 18.96px;
+  position: absolute;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.add_contact {
+  display: flex;
+  border-radius: 100px;
+  width: 56px;
+  height: 56px;
+  background-color: #e8eaed;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+  height: 72px;
+  padding-top: 16px;
+}
+
+.contact_details {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.secondary {
+  font-size: 12px;
+  color: #bfbfbf;
+  font-weight: 400;
+  margin: 4px;
+}
+
+.p16 {
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.attribute {
+  width: 56px;
+  font-size: 12px;
+  color: #595959;
+}
+
+.attribute_value {
+  font-size: 12px;
+  color: #262626;
+}
+
+.attribute_box {
+  height: 20px;
+  margin: 16px 70px;
+}
+
+.contact_row:hover {
+  background-color: #f5f5f5;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 20px;
+}

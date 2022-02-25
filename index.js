@@ -1,5 +1,20 @@
+import {home, contacts_template, login} from './scripts/templates.js'
+import {render} from './scripts/handlers.js'
+import {addContactListeners, addLoginListeners} from './scripts/listeners.js'
+
 import { createContact, getContact, getContacts, deleteContact, updateContact, toggleFavorite } from "./scripts/services/contacts-service.js";
 import { login, signup } from "./scripts/services/session-service.js";
+
+if (0 == 2){
+  render(home, "body");
+  render(contacts_template, ".js-contacts");
+  addContactListeners();
+} else {
+  render(login, "body");
+  addLoginListeners();
+}
+
+//=======
 
 const credentials = {
   email: "steve@mail.com",
@@ -26,3 +41,4 @@ async function test() {
 }
 
 test();
+
