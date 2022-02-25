@@ -34,16 +34,30 @@ section {
   height: 20px;
 }
 
-#email {
+input {
+  font-size: 12px;
+  color: #bfbfbf;
+  font-weight: 400;
   border: 0;
   width: 100%;
   outline: none;
 }
 
-label {
+select {
   font-size: 12px;
   color: #bfbfbf;
   font-weight: 400;
+  border: 0;
+  width: 100%;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
 }
 
 .link {
