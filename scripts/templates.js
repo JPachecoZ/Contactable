@@ -25,7 +25,7 @@ let id_count = 0;
 for (let element of CONTACT_LIST){
   
   contacts_template +=`
-  <div class="box contact_row" id="${id_count}">
+  <div class="box contact_row" id="c${id_count}">
     <div class="contact">
       <img src="/img/Profile.svg" />
       <span>${element.name}</span>
@@ -38,4 +38,82 @@ for (let element of CONTACT_LIST){
   id_count++;
 }
 
-export {home, contacts_template, id_count}
+const login = `
+  <section>
+    <div class="box">Login</div>
+    <div class="headline"></div>
+    <div class="box">
+      <div class="input">
+        <div class="inner_input">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            placeholder="email"
+          />
+        </div>
+        <div class="headline"></div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="input">
+        <div class="inner_input">
+          <input
+            type="text"
+            id="password"
+            name="password"
+            required
+            placeholder="password"
+          />
+        </div>
+        <div class="headline"></div>
+      </div>
+    </div>
+    <div class="headline"></div>
+    <ul class="link">
+    <li><a href="" class="signup">Signup</a></li>
+    <li><a href="" class="login">Login</a></li>
+    </ul>
+  </section>
+`
+const signup = `
+  <section>
+    <div class="box">Signup</div>
+    <div class="headline"></div>
+    <div class="box">
+      <div class="input">
+        <div class="inner_input">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            placeholder="email"
+          />
+        </div>
+        <div class="headline"></div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="input">
+        <div class="inner_input">
+          <input
+            type="text"
+            id="password"
+            name="password"
+            required
+            placeholder="password"
+          />
+        </div>
+        <div class="headline"></div>
+      </div>
+    </div>
+    <div class="headline"></div>
+    <ul class="link">
+      <li><a href="">Login</a></li>
+      <li><a href="">Create Account</a></li>
+    </ul>
+  </section>
+`
+export {home, contacts_template, id_count, login, signup}
