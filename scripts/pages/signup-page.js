@@ -11,17 +11,19 @@ function render() {
   return `
     <section>
       <div class="header">
-        <h1>Login</h1>
+        <h1>Signup</h1>
       </div>
-      <form class="form signup-form">
-          <input type="text" id="email" name="email" required placeholder="email" />
-          <input type="text" id="password" name="password" required placeholder="password" />
-          ${signupError ? `<p> ${signupError}</p>` : ""}
-          <div class="footer-links">
-          <a href="" class="signup">Login</a>
-          <button class="button button--primary">Create account</button>
-          </div>
-      </form>
+      <div class="container">
+        <form class="form signup-form">
+            <input type="text" id="email" name="email" required placeholder="email" />
+            <input type="text" id="password" name="password" required placeholder="password" />
+            ${signupError ? `<p> ${signupError}</p>` : ""}
+            <div class="footer-links">
+            <a href="" class="signup">Login</a>
+            <button class="button button--primary">Create account</button>
+            </div>
+        </form>
+      </div>
     </section>
   `
 }
