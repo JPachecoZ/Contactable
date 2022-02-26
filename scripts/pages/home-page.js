@@ -20,7 +20,7 @@ function renderContact(contact) {
       <span>${contact.name}</span>
     </div>
     <a class="star" data-id-favorite="${contact.id}">
-      ${contact.favorite ? '<img src="/img/star_fav.svg"/>' : '<img src="/img/star.svg"/>'}
+      ${contact.favorite ? '<img src="/img/star_fav.svg" /> <img src="/img/starin.svg"  class="favon" />' : '<img src="/img/Star.svg"/>'}
     </a>
   </div>
   `
