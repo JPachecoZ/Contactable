@@ -8,6 +8,8 @@ import { logout } from "../services/session-service.js";
 // Pages
 import HomePage from "./home-page.js";
 import LoginPage from "./login-page.js";
+import EditContatPage from "./edit-contact-page.js";
+import { deleteContact } from "../services/contacts-service.js";
 
 // Draws page
 function render() {
@@ -46,6 +48,7 @@ function render() {
 // Creates functions for page listeners
 
 function listenLogout() {
+  
   const logoutButton = document.querySelector(".logout-link")
 
   logoutButton.addEventListener("click", async (event) => {
@@ -60,7 +63,15 @@ function listenLogout() {
 }
 
 function listenToEditContact() {
-  console.log("Se va al page editar contacto")
+  try {
+    const toAddEditLink = document.querySelector(".to-edit")
+
+    toAddEditLink.addEventListener("click", () => {
+      DOMHandler.load(EditContatPage)
+    })
+  } catch (error) {
+    console.log(error.message)
+  }
 }
 
 function listenGoBack() {
@@ -76,9 +87,16 @@ function listenGoBack() {
 }
 
 function listenDelete() {
-  console.log("Se borra el contacto")
-}
+  const id = STORE.currentContactId;
+  const toDeleteContact = document.querySelector(".to-delete");
 
+  toDeleteContact.addEventListener("click", async (event) => {
+    event.preventDefault();
+    await deleteContact(id);
+    await STORE.fetchContacts();
+    DOMHandler.load(HomePage);
+  })
+}
 // Creates object to export
 
 const ContactPage = {
