@@ -9,16 +9,17 @@ import { logout } from "../services/session-service.js"
 // Pages
 import LoginPage from "./login-page.js";
 import NewContactPage from "./new-contact-page.js";
+import ContactPage from "./contact-page.js";
 
 // Draws page
 function renderContact(contact) {
   return `
   <div class="contact-box">
-    <div class="profile">
+    <div class="profile" data-id-detail="${contact.id}">
       <img src="/img/Profile.svg"/>
       <span>${contact.name}</span>
     </div>
-    <a class="star" data-id="${contact.id}">
+    <a class="star" data-id-favorite="${contact.id}">
       ${contact.favorite ? '<img src="/img/star_fav.svg"/>' : '<img src="/img/star.svg"/>'}
     </a>
   </div>
@@ -71,11 +72,11 @@ function listenFavorite() {
 
   contactList.addEventListener("click", async (event) => {
     // Obtiene el id del contacto, en este caso está en el boton estrella de cada contacto
-    const starButton = event.target.closest("[data-id]");
+    const starButton = event.target.closest("[data-id-favorite]");
     if (!starButton) return;
 
     event.preventDefault();
-    const id = starButton.dataset.id;
+    const id = starButton.dataset.idFavorite;
     await toggleFavorite(id);
     await STORE.fetchContacts();
     DOMHandler.reload();
@@ -94,6 +95,20 @@ function listenToAddContact() {
   }
 }
 
+function listenToShowContact() {
+  const contactList = document.querySelector(".contact-list")
+
+  contactList.addEventListener("click", async (event) => {
+    const toShowContactLink = event.target.closest("[data-id-detail]");
+    if (!toShowContactLink) return;
+
+    event.preventDefault();
+    const id = toShowContactLink.dataset.idDetail;
+    STORE.currentContactId = id;
+    DOMHandler.load(ContactPage);
+  });
+}
+
 // Creates object to import
 
 const HomePage = {
@@ -104,6 +119,7 @@ const HomePage = {
     listenLogout();
     listenFavorite();
     listenToAddContact();
+    listenToShowContact();
   }
 };
 
