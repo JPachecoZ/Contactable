@@ -103,6 +103,7 @@ function listenToShowContact() {
     if (!toShowContactLink) return;
 
     event.preventDefault();
+
     const id = toShowContactLink.dataset.idDetail;
     STORE.currentContactId = id;
     DOMHandler.load(ContactPage);

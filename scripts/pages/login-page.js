@@ -42,8 +42,7 @@ function listenLogin() {
     try {
       event.preventDefault();
       const { email, password } = event.target;
-      console.log(event);
-      
+
       const data = {
         email: email.value,
         password: password.value,

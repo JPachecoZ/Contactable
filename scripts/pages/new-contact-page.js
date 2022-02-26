@@ -1,15 +1,22 @@
 // Helpers
 import DOMHandler from "../dom-handler.js";
 import STORE from "../store.js";
+
+// Services
 import { createContact } from "../services/contacts-service.js";
+import { logout } from "../services/session-service.js";
+
+// Pages
+import HomePage from "./home-page.js";
+import LoginPage from "./login-page.js";
 
 // Services
 // Pages
 
 // Draws page
 function render() {
-  // const { createError } = NewContactPage.state
-  // ${createError ? `<p> ${createError}</p>` : ""}
+  const { createError } = NewContactPage.state
+  
   return `
     <section style="position: relative">
       <div class="header">
@@ -28,7 +35,7 @@ function render() {
             <option value = "Work">Work</option>
             <option value = "Acquaintance">Acquaintance</option>
           </select>
-          
+          ${createError ? `<p> ${createError}</p>` : ""}
           <div class="footer-links">
           <a class="to-home">Cancel</a>
           <button class="button button--primary">Save</button>
@@ -48,30 +55,50 @@ function listenAddContact() {
     try {
       event.preventDefault();
       const { name, email, number, relation } = event.target;
-      console.log(event);
-      console.log(email.value);
-      console.log(number.value);
-      console.log(relation.value);
       const data = {
         name: name.value,
         email: email.value,
         number: number.value,
         relation: relation.value,
       };
-      console.log(data);
-      const result = await createContact(data);
-      console.log(result);
-      alert("Se agrego contacto " + data.name);
+ 
+      await createContact(data);
+      await STORE.fetchContacts();
+      DOMHandler.load(HomePage);
+
+      alert("Se agrego contacto " + data.name);   
 
     } catch (error) {
-      // NewContactPage.state.signupError = error.message;
+      NewContactPage.state.signupError = error.message;
       DOMHandler.reload();
     }
   })
 }
 
 function listenCancel() {
-  console.log("Se cancela y se vuelve al home")
+  try {
+    const toHomeLink = document.querySelector(".to-home");
+
+    toHomeLink.addEventListener("click", () => {
+      DOMHandler.load(HomePage);
+    })
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+function listenLogout() {
+  const logoutButton = document.querySelector(".logout-link")
+
+  logoutButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+    try {
+      await logout();
+      DOMHandler.load(LoginPage)
+    } catch (error) {
+      console.log(error)
+    }
+  });
 }
 
 // Creates object to export
@@ -81,8 +108,12 @@ const NewContactPage = {
     return render();
   },
   addListeners() {
+    listenLogout();
     listenAddContact();
-    //listenCancel();
+    listenCancel();
+  },
+  state: {
+    loginError: null,
   }
 }
 
