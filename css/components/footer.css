@@ -1,0 +1,23 @@
+.footer-links {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+}
+
+.footer-links button, .footer-links a {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: #2962ff;
+  cursor: pointer;
+}
+
+.footer-links a {
+  margin-top: 2px;
+}
