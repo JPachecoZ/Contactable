@@ -21,45 +21,6 @@ section {
   max-width: 760px;
 }
 
-.input {
-  font-size: 12px;
-  padding: 8px 50px;
-  width: 100%;
-}
-
-.inner_input {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 20px;
-}
-
-input {
-  font-size: 12px;
-  color: #bfbfbf;
-  font-weight: 400;
-  border: 0;
-  width: 100%;
-  outline: none;
-}
-
-select {
-  font-size: 12px;
-  color: #bfbfbf;
-  font-weight: 400;
-  border: 0;
-  width: 100%;
-  outline: none;
-  background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-select::-ms-expand {
-  display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
-}
-
 .link {
   display: flex;
   gap: 26px;
@@ -69,12 +30,12 @@ select::-ms-expand {
   color: #2962ff;
 }
 
-.header {
+/* .header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #595959;
   justify-content: space-between;
-}
+} */
 
 .home {
   font-size: 12px;
@@ -98,18 +59,6 @@ select::-ms-expand {
   display: flex;
   align-items: center;
   gap: 32px;
-}
-
-.add_contact {
-  display: flex;
-  border-radius: 100px;
-  width: 56px;
-  height: 56px;
-  background-color: #e8eaed;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 
 .details {
@@ -173,9 +122,4 @@ select::-ms-expand {
 .flex-end {
   display: flex;
   justify-content: flex-end;
-}
-
-.sticky {
-  position: sticky;
-  bottom: 20px;
 }
