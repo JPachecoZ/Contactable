@@ -18,10 +18,10 @@ function render() {
       </div>
       <div class="container">
         <form class="form newcontact-form">
-          <input type="text" id="Name" name="Name" required placeholder="Name" />
-          <input type="text" id="Number" name="Number" required placeholder="Number" />
-          <input type="text" id="Email" name="Email" required placeholder="Email" />
-          <select id="Relation" name="Relation" required >
+          <input type="text" id="name" name="name" required placeholder="Name" />
+          <input type="text" id="number" name="number" required placeholder="Number" />
+          <input type="text" id="email" name="email" required placeholder="Email" />
+          <select id="relation" name="relation" required >
             <option value="" selected disabled hidden>Relation</option>
             <option value = "Family">Family</option>
             <option value = "Friends">Friends</option>
@@ -48,7 +48,10 @@ function listenAddContact() {
     try {
       event.preventDefault();
       const { name, email, number, relation } = event.target;
-      console.log(event.target);
+      console.log(event);
+      console.log(email.value);
+      console.log(number.value);
+      console.log(relation.value);
       const data = {
         name: name.value,
         email: email.value,
