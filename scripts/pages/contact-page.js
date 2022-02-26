@@ -12,7 +12,7 @@ import LoginPage from "./login-page.js";
 // Draws page
 function render() {
   const contact = STORE.contacts.find((element) => element.id == STORE.currentContactId);
-  console.log(contact);
+  
   return `
     <section style="position: relative">
       <div class="header">

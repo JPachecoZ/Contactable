@@ -29,7 +29,6 @@ function renderContact(contact) {
 function render() {
   const contactList = STORE.contacts;
   const favoriteList = STORE.favoriteContacts;
-  console.log(contactList);
   return `
     <section style="position: relative">
       <div class="header">

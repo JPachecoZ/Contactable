@@ -35,7 +35,6 @@ function listenSignup() {
   loginForm.addEventListener("submit", async (event) => {
     try {
       event.preventDefault();
-      console.log(event.target)
       const { email, password } = event.target;
 
       const data = {
