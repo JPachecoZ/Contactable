@@ -12,6 +12,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 32px;
+  cursor: pointer;
 }
 
 .profile span {
@@ -56,9 +57,3 @@
 .star:hover img {
   transform: scale(1.1);
 }
-/* 
-.favorite1 {
-  width: 19.85px;
-  height: 18.96px;
-  position: absolute;
-} */

@@ -10,6 +10,7 @@ async function fetchContacts() {
 
 const STORE = {
   user: null,
+  currentContactId: null,
   contacts: [],
   favoriteContacts: [],
   fetchContacts,
