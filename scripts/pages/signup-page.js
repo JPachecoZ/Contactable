@@ -16,7 +16,7 @@ function render() {
       <div class="container">
         <form class="form signup-form">
             <input type="text" id="email" name="email" required placeholder="email" />
-            <input type="text" id="password" name="password" required placeholder="password" />
+            <input type="password" id="password" name="password" required placeholder="password" />
             ${signupError ? `<p> ${signupError}</p>` : ""}
             <div class="footer-links">
             <a href="" class="signup">Login</a>
