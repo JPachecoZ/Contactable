@@ -2,7 +2,8 @@ import { getContacts } from "./services/contacts-service.js"
 
 async function fetchContacts() {
   const contacts = await getContacts();
-  this.contacts = contacts;
+  const ordered_contacts = contacts.sort(function(a,b){return a.name.localeCompare(b.name)});
+  this.contacts = ordered_contacts;
   this.favoriteContacts = contacts.filter(
     (contact) => contact.favorite
   );
