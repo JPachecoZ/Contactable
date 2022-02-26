@@ -1,3 +1,5 @@
+/* Contact box */
+
 .contact-box {
   padding: 15px 25px;
   display: flex;
@@ -16,7 +18,9 @@
   font-size: 16px;
 }
 
-.add_contact {
+/* Add contact button */
+
+.add-contact {
   width: 56px;
   height: 56px;
   display: block;
@@ -32,3 +36,29 @@
   bottom: 0;
   right: 20px;
 }
+
+.add-contact:hover {
+  transform: scale(1.1);
+}
+
+/* Star */
+
+.star {
+  width: 22px;
+  height: 21px;
+  display: block;
+  cursor: pointer;
+}
+.star img {
+  position: relative;
+}
+
+.star:hover img {
+  transform: scale(1.1);
+}
+/* 
+.favorite1 {
+  width: 19.85px;
+  height: 18.96px;
+  position: absolute;
+} */

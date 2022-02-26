@@ -4,7 +4,7 @@ async function fetchContacts() {
   const contacts = await getContacts();
   this.contacts = contacts;
   this.favoriteContacts = contacts.filter(
-    (contact) => contact.favorite == true
+    (contact) => contact.favorite
   );
 }
 

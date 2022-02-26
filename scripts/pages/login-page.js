@@ -16,16 +16,20 @@ function render() {
 
   return `
     <section>
-      <div class="header">Login</div>
-      <form class="form login-form">
-          <input type="text" id="email" name="email" required placeholder="email" />
-          <input type="text" id="password" name="password" required placeholder="password" />
-          ${loginError ? `<p> ${loginError}</p>` : ""}
-          <div class="footer-links">
-          <a class="to-signup">Signup</a>
-          <button class="button button--primary">Login</button>
-          </div>
-      </form>
+      <div class="header">
+        <h1>Login</h1>
+      </div>
+      <div class="container">
+        <form class="form login-form">
+            <input type="text" id="email" name="email" required placeholder="email" />
+            <input type="text" id="password" name="password" required placeholder="password" />
+            ${loginError ? `<p> ${loginError}</p>` : ""}
+            <div class="footer-links">
+            <a class="to-signup">Signup</a>
+            <button class="button button--primary">Login</button>
+            </div>
+        </form>
+      </div>
     </section>
   `
 }
