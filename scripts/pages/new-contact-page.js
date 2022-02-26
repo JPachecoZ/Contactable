@@ -10,9 +10,6 @@ import { logout } from "../services/session-service.js";
 import HomePage from "./home-page.js";
 import LoginPage from "./login-page.js";
 
-// Services
-// Pages
-
 // Draws page
 function render() {
   const { createError } = NewContactPage.state
