@@ -10,7 +10,9 @@ function render() {
 
   return `
     <section>
-      <div class="header">Signup</div>
+      <div class="header">
+        <h1>Login</h1>
+      </div>
       <form class="form signup-form">
           <input type="text" id="email" name="email" required placeholder="email" />
           <input type="text" id="password" name="password" required placeholder="password" />

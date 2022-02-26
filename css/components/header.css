@@ -1,8 +1,18 @@
 .header {
   padding: 15px;
-  font-size: 24px;
-  color: #262626;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.header h1 {
+  font-size: 30px;
+  color: #262626;
+}
+
+.header a {
+  font-size: 14px;
+  color: #2962ff;
+  cursor: pointer;
 }

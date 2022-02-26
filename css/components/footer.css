@@ -21,3 +21,7 @@
 .footer-links a {
   margin-top: 2px;
 }
+
+.form .footer-links {
+  margin-top: 150px;
+}
